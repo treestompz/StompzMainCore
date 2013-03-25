@@ -98,8 +98,9 @@ public class StompzMainCore extends JavaPlugin
 												playersMeow.remove(player.getName());
 												player.sendMessage(ChatColor.GREEN + "Meow cooldown complete.");
 												player.playSound(player.getLocation(), Sound.NOTE_PLING, 10, 1);
-											}								
-										}, 20 * 5);
+											}				
+											//60 second cooldown
+										}, 20 * 60);
 									}
 								}
 								//If the target is NOT a valid online player

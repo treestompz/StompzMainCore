@@ -1,0 +1,14 @@
+name: StompzMainCore
+main: me.treestompz.StompzMainCore.StompzMainCore
+version: 1337
+commands:
+   meow:
+      description: derp
+      usage: /<command> [player]
+      permission: stompz.meow
+      permission-message: You don't have permission to meow people. y u no kitteh?
+   meowtoggle:
+      description: derp
+      usage: /<command>
+      permission: stompz.meow
+      permission-message: You don't have permission to meow people. y u no kitteh?
