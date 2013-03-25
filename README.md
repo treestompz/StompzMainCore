@@ -1,0 +1,4 @@
+StompzMainCore
+==============
+
+StompzMainCore plugin :D
