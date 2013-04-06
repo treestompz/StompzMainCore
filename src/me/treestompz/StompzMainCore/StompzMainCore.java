@@ -96,7 +96,7 @@ public class StompzMainCore extends JavaPlugin
 											public void run()
 											{
 												playersMeow.remove(player.getName());
-												player.sendMessage(ChatColor.GREEN + "Meow cooldown complete.");
+												player.sendMessage(ChatColor.GREEN + "Meowdown complete.");
 												player.playSound(player.getLocation(), Sound.NOTE_PLING, 10, 1);
 											}				
 											//60 second cooldown
@@ -118,7 +118,7 @@ public class StompzMainCore extends JavaPlugin
 						//If the player has tried to meow again when the cooldown is still running
 						else
 						{
-							player.sendMessage(ChatColor.RED + "Your /meow is still cooling down! Meow wisely, young kitteh!");	
+							player.sendMessage(ChatColor.RED + "Your /meow is still meowingdown! Meow wisely, young kitteh!");	
 						}
 					}
 					return true;
