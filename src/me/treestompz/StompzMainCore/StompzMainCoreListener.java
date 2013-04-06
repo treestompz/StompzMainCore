@@ -44,7 +44,7 @@ public class StompzMainCoreListener implements Listener
 			event.getPlayer().sendMessage(ChatColor.RED + "Non-donators cannot place lava because many new players use it to grief and kill other players! It's the sad Minecraft world we live in :(" + ChatColor.GREEN + " If you'd like to consider donating for tons of other perks, check out: " + ChatColor.AQUA + "http://stompzcraft.com/shop");
 		}
 	}
-	
+	/*Messing with fishing-not implemented
 	@EventHandler
 	public void onFish(PlayerFishEvent event)
 	{
@@ -68,5 +68,5 @@ public class StompzMainCoreListener implements Listener
 			} 
 			
 		}
-	}
+	}*/
 }
