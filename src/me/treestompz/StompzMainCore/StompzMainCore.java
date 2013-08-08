@@ -32,8 +32,8 @@ public class StompzMainCore extends JavaPlugin
 	public void onDisable()
 	{
 		/*
-		         ;'-. 
-     `;-._        )  '---.._
+				 ;'-. 
+	 `;-._        )  '---.._
        >  `-.__.-'          `'.__
       /_.-'-._         _,   ^ ---)
       `       `'------/_.'----```
