@@ -31,7 +31,14 @@ public class StompzMainCore extends JavaPlugin
 
 	public void onDisable()
 	{
+		/*
+		         ;'-. 
+     `;-._        )  '---.._
+       >  `-.__.-'          `'.__
+      /_.-'-._         _,   ^ ---)
+      `       `'------/_.'----```
 
+		 */
 	}
 
 	// ArrayList used to store player's usernames
