@@ -12,3 +12,8 @@ commands:
       usage: /<command>
       permission: stompz.meow
       permission-message: You don't have permission to meow people. y u no kitteh?
+   reboot:
+      description: OP commandzz
+      usage: /<command>
+      permission: stompz.reboot
+      permission-message: 
