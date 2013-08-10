@@ -23,19 +23,16 @@ public class StompzMainCoreListener implements Listener
 	private StompzMainCore plugin;
 	private ArrayList<String> commandCooldown;
 
-	public StompzMainCoreListener(StompzMainCore plugin)
-	{
+	public StompzMainCoreListener(StompzMainCore plugin) {
 		this.plugin = plugin;     
 		commandCooldown = new ArrayList<String>();
 	}
 
 	// When a player uses a bucket
 	@EventHandler (priority = EventPriority.MONITOR)
-	public void blockplaceevent(PlayerBucketEmptyEvent event)
-	{
+	public void onPlayerBucketEmpty(PlayerBucketEmptyEvent event) {
 		// If the bucket is a lava bucket AND the player does not have the permission "stompz.placelava"
-		if(event.getBucket() == Material.LAVA_BUCKET && !event.getPlayer().hasPermission("stompz.placelava"))
-		{
+		if(event.getBucket() == Material.LAVA_BUCKET && !event.getPlayer().hasPermission("stompz.placelava")) {
 			// Cancel the event of dropping lava
 			event.setCancelled(true);
 			// Alert the player
@@ -44,28 +41,20 @@ public class StompzMainCoreListener implements Listener
 	}
 
 	@EventHandler (priority = EventPriority.MONITOR)
-	public void onPlayerCommandPreprocess(PlayerCommandPreprocessEvent event)
-	{
+	public void onPlayerCommandPreprocess(PlayerCommandPreprocessEvent event) {
 		// Avoid out of bounds exception
-		if(event.getMessage().length() > 6)
-		{
+		if(event.getMessage().length() > 6) {
 			final Player p = event.getPlayer();
-			if(event.getMessage().substring(0, 7).equalsIgnoreCase("/ps add"))
-			{
-				if(!commandCooldown.contains(p.getName()))
-				{
+			if(event.getMessage().substring(0, 7).equalsIgnoreCase("/ps add")) {
+				if(!commandCooldown.contains(p.getName())) {
 					commandCooldown.add(event.getPlayer().getName());
-					plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable()
-					{
-						public void run()
-						{
+					plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
+						public void run() {
 							commandCooldown.remove(p.getName());
 						}
 					}
 					, 20 * 20);
-				}
-				else
-				{
+				} else {
 					event.setCancelled(true);
 					p.sendMessage(ChatColor.RED + "You are sending that command too often!");
 				}
